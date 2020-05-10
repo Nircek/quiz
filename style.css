@@ -1,0 +1,25 @@
+body {
+  margin: 8px;
+}
+.flex {
+  width: calc(100vw - 2 * 8px);
+  height: calc(100vh - 2 * 8px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: stretch;
+}
+.flex-item {
+  border: 1px black solid;
+  margin: 5px;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.question {
+  min-width: 90vw;
+  min-height: 50vh;
+}
+.answer {
+  min-width: 34vw;
+}
