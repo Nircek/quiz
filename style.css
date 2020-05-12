@@ -17,13 +17,13 @@ body {
   align-content: stretch;
   align-items: stretch;
 }
-.flex-item {
+.flex > div {
   border: 1px black solid;
   margin: 5px;
   padding: 0.5em 1vw;
   flex-basis: 0;
 }
-.flex-item > p {
+.flex > div > p {
   margin: 0;
   position: relative;
   top: 50%;
@@ -32,7 +32,7 @@ body {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.flex-item > img {
+.flex > div > img {
   margin: 0;
   position: relative;
   top: 50%;
