@@ -1,25 +1,73 @@
 body {
   margin: 8px;
+  font-size: 3vmin;
+}
+.timer p,
+.counter p,
+.points p {
+  text-align: center;
 }
 .flex {
-  width: calc(100vw - 2 * 8px);
-  height: calc(100vh - 2 * 8px);
+  margin: auto;
+  width: calc(100vw - 3 * 8px);
+  height: calc(100vh - 3 * 8px);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: stretch;
   align-content: stretch;
   align-items: stretch;
 }
 .flex-item {
   border: 1px black solid;
   margin: 5px;
+  padding: 0.5em 1vw;
   flex-basis: 0;
+}
+.flex-item > p {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.flex-item > img {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.counter {
+  min-width: calc(92vw - 22ch - 42px);
   flex-grow: 1;
 }
+.points {
+  min-width: 13ch;
+}
+.pic {
+  min-width: 40vmin;
+  max-height: 50vh;
+  overflow: hidden;
+}
+.pic > img {
+  height: 100%;
+  width: auto;
+}
 .question {
-  min-width: 90vw;
-  min-height: 50vh;
+  min-width: calc(70vw - 40vmin - 2em);
+  min-height: 40vmin;
+  max-height: 50vh;
+  overflow: hidden;
+  flex-grow: 1;
+}
+.noimg {
+  min-width: calc(70vw - 2em);
 }
 .answer {
   min-width: 34vw;
+  min-height: calc(30vh - 4em - 40px);
+  flex-grow: 1;
 }
