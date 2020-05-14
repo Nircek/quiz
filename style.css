@@ -1,6 +1,12 @@
 body {
   margin: 8px;
   font-size: 3vmin;
+background-color: #D9FCFF;
+}
+.timer,
+.counter,
+.points {
+background-color: #F7C2F7;
 }
 .timer p,
 .counter p,
@@ -18,7 +24,7 @@ body {
   align-items: stretch;
 }
 .flex > div {
-  border: 1px black solid;
+border-radius: 20px;
   margin: 5px;
   padding: 0.5em 1vw;
   flex-basis: 0;
@@ -48,6 +54,7 @@ body {
   min-width: 13ch;
 }
 .pic {
+background-color: #FFF1C5;
   min-width: 40vmin;
   max-height: 50vh;
   overflow: hidden;
@@ -57,6 +64,7 @@ body {
   width: auto;
 }
 .question {
+background-color: #FFF1C5;
   min-width: calc(70vw - 40vmin - 2em);
   min-height: 40vmin;
   max-height: 50vh;
@@ -70,4 +78,16 @@ body {
   min-width: 34vw;
   min-height: calc(30vh - 4em - 40px);
   flex-grow: 1;
+}
+.aa {
+background-color: #F42323;
+}
+.ab {
+background-color: #0FC418;
+}
+.ac {
+background-color: yellow;
+}
+.ad {
+background-color: #1382D8;
 }
