@@ -7,6 +7,7 @@ background-color: #D9FCFF;
 .counter,
 .points {
 background-color: #F7C2F7;
+background-image: linear-gradient(to bottom right, rgb(249,205,249), rgb(235,155,235), rgb(194,116,194));
 }
 .timer p,
 .counter p,
@@ -24,7 +25,8 @@ background-color: #F7C2F7;
   align-items: stretch;
 }
 .flex > div {
-box-shadow: 10px 5px 8px 0 rgba(0, 0, 0, 1);
+
+box-shadow: 5px 3px 4px 0 rgba(0, 0, 0, 1);
 border-radius: 20px;
   margin: 5px;
   padding: 0.5em 1vw;
@@ -56,6 +58,7 @@ border-radius: 20px;
 }
 .pic {
 background-color: #FFF1C5;
+background-image: linear-gradient(to bottom right, rgb(255,241,197), rgb(233,218,170));
   min-width: 40vmin;
   max-height: 50vh;
   overflow: hidden;
@@ -66,6 +69,7 @@ background-color: #FFF1C5;
 }
 .question {
 background-color: #FFF1C5;
+background-image: linear-gradient(to bottom right, rgb(255,241,197), rgb(233,218,170));
   min-width: calc(70vw - 40vmin - 2em);
   min-height: 40vmin;
   max-height: 50vh;
@@ -82,13 +86,17 @@ background-color: #FFF1C5;
 }
 .aa {
 background-color: #F42323;
+background-image: linear-gradient(to bottom right, rgb(255,0,0), rgb(185,28,28));
 }
 .ab {
 background-color: #0FC418;
+background-image: linear-gradient(to bottom right, rgb(0,255,0), rgb(32,121,36));
 }
 .ac {
 background-color: yellow;
+background-image: linear-gradient(to bottom right, rgb(255,255,0), rgb(172,172,41));
 }
 .ad {
 background-color: #1382D8;
+background-image: linear-gradient(to bottom right, rgb(0,144,255), rgb(40,104,155));
 }
