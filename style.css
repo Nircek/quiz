@@ -24,6 +24,7 @@ background-color: #F7C2F7;
   align-items: stretch;
 }
 .flex > div {
+box-shadow: 10px 5px 8px 0 rgba(0, 0, 0, 1);
 border-radius: 20px;
   margin: 5px;
   padding: 0.5em 1vw;
