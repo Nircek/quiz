@@ -14,6 +14,16 @@ var data = {
       img: 'https://images.pexels.com/photos/374918/pexels-photo-374918.jpeg',
       answers: ['4', '16', '7', '6'],
     },
+    {
+      question: '2*2=?',
+      img: 'https://images.pexels.com/photos/374918/pexels-photo-374918.jpeg',
+      answers: ['4', '16', '7', '6'],
+    },
+    {
+      question: '2*2=?',
+      img: 'https://images.pexels.com/photos/374918/pexels-photo-374918.jpeg',
+      answers: ['4', '16', '7', '6'],
+    },
   ],
 };
 
@@ -79,7 +89,6 @@ var question_update = (end = false) => {
         'c',
         i ? seven : (seven + 1 + Math.random() * 6) | 0
       );
-      e.parentElement.setAttribute('onclick', 'select(this)');
     }
   if (q.img) {
     cmain('question', false)[0].classList.remove('noimg');
@@ -89,8 +98,12 @@ var question_update = (end = false) => {
     cmain('question', false)[0].classList.add('noimg');
     cmain('pic', false)[0].classList.add('noimg');
   }
-  // console.log(cmain('answer').map((x) => x.getAttribute('c')%7));
+  // console.log(cmain('answer', 0).map((x) => x.getAttribute('c')%7));
 };
+var question_unlock = () =>
+  cmain('answer', 0).map((x) => x.setAttribute('onclick', 'select(this)'));
+var question_lock = () =>
+  cmain('answer', 0).map((x) => x.removeAttribute('onclick'));
 question_update();
 var start = Date.now() / 1000;
 var timer_update = () => {
@@ -104,13 +117,27 @@ var timer_update = () => {
 var timer = setInterval(timer_update, 1000);
 cmain('timer');
 var select = (e) => {
-  cmain('answer', 0).map((e) => e.removeAttribute('onclick'));
+  question_lock();
   if (e.getAttribute('c') % 7) ++points;
   if (++question_i == data.questions.length) {
     --question_i;
     clearInterval(timer);
     question_update(1);
   } else {
+    let next = main.cloneNode(1);
+    next.id = 'next';
+    main.parentElement.append(next);
+    let prev = main;
+    main = next;
     question_update();
+    setTimeout(() => {
+      prev.id = 'prev';
+      main.id = 'main';
+      setTimeout(() => {
+        question_unlock();
+        main.parentElement.removeChild(prev);
+      }, 2000);
+    }, 100);
   }
 };
+question_unlock();

@@ -1,7 +1,11 @@
 body {
+  overflow: hidden;
   margin: 8px;
   font-size: 3vmin;
 background-color: #D9FCFF;
+}
+#container {
+  width: 200vw;
 }
 .timer,
 .counter,
@@ -15,7 +19,7 @@ background-image: linear-gradient(to bottom right, rgb(249,205,249), rgb(235,155
   text-align: center;
 }
 .flex {
-  margin: auto;
+  margin-left: calc(0.5 * 8px);
   width: calc(100vw - 3 * 8px);
   height: calc(100vh - 3 * 8px);
   display: flex;
@@ -23,6 +27,11 @@ background-image: linear-gradient(to bottom right, rgb(249,205,249), rgb(235,155
   justify-content: stretch;
   align-content: stretch;
   align-items: stretch;
+  float:left;
+}
+#prev {
+  transition: margin-left 1.5s;
+  margin-left: -100vw;
 }
 .flex > div {
 
