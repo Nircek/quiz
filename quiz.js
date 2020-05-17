@@ -1,3 +1,4 @@
+'use strict';
 var data = {
   title: 'Maths - question',
   author: 'Nircek',
@@ -47,7 +48,7 @@ if (main === null) {
   document.getElementsByClassName('question')[0].parentElement.id = 'main';
   var main = document.getElementById('main');
 }
-cmain = (x, i = true) =>
+var cmain = (x, i = true) =>
   i
     ? [...main.getElementsByClassName(x)].map(
         (y) =>
@@ -60,21 +61,26 @@ cmain = (x, i = true) =>
 var question_i = 0;
 var points = 0;
 cmain('footer')[0].innerHTML = data.author;
-question_update = () => {
+var question_update = (end = false) => {
   cmain('counter')[0].innerHTML =
     data.title + ' ' + (question_i + 1) + '/' + data.questions.length;
   cmain('points')[0].innerHTML = points + ' ' + data.points;
   let q = data.questions[question_i];
   cmain('question')[0].innerHTML = q.question;
-  n = Math.min(cmain('answer').length, q.answers.length);
+  let n = Math.min(cmain('answer').length, q.answers.length);
   let perms = permute([...Array(n).keys()]);
   perms = perms[(Math.random() * perms.length) | 0];
-  for (i = 0; i < n; ++i) {
-    let e = cmain('answer')[perms[i]];
-    e.innerHTML = q.answers[i];
-    let seven = 7 * (((1 << 28) * Math.random() - 7) | 0);
-    e.setAttribute('c', i == 0 ? seven : (seven + 1 + Math.random() * 6) | 0);
-  }
+  if (!end)
+    for (let i = 0; i < n; ++i) {
+      let e = cmain('answer')[perms[i]];
+      e.innerHTML = q.answers[i];
+      let seven = 7 * (((1 << 28) * Math.random() - 7) | 0);
+      e.parentElement.setAttribute(
+        'c',
+        i ? seven : (seven + 1 + Math.random() * 6) | 0
+      );
+      e.parentElement.setAttribute('onclick', 'select(this)');
+    }
   if (q.img) {
     cmain('question', false)[0].classList.remove('noimg');
     cmain('pic', false)[0].classList.remove('noimg');
@@ -87,14 +93,24 @@ question_update = () => {
 };
 question_update();
 var start = Date.now() / 1000;
-timer_update = () => {
+var timer_update = () => {
   let s = '';
   let t = Date.now() / 1000 - start;
   s += ('0' + ((t / 60) | 0)).slice(-2);
   s += ':';
   s += ('0' + (t % 60 | 0)).slice(-2);
   cmain('timer')[0].innerText = s;
-  console.log(s);
 };
 var timer = setInterval(timer_update, 1000);
 cmain('timer');
+var select = (e) => {
+  cmain('answer', 0).map((e) => e.removeAttribute('onclick'));
+  if (e.getAttribute('c') % 7) ++points;
+  if (++question_i == data.questions.length) {
+    --question_i;
+    clearInterval(timer);
+    question_update(1);
+  } else {
+    question_update();
+  }
+};
