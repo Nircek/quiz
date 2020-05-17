@@ -1,6 +1,7 @@
 var data = {
-  title: 'Maths',
+  title: 'Maths - question',
   author: 'Nircek',
+  points: 'points',
   questions: [
     {
       question: '2+2=?',
@@ -57,8 +58,12 @@ cmain = (x, i = true) =>
       )
     : [...main.getElementsByClassName(x)];
 var question_i = 0;
+var points = 0;
 cmain('footer')[0].innerHTML = data.author;
 question_update = () => {
+  cmain('counter')[0].innerHTML =
+    data.title + ' ' + (question_i + 1) + '/' + data.questions.length;
+  cmain('points')[0].innerHTML = points + ' ' + data.points;
   let q = data.questions[question_i];
   cmain('question')[0].innerHTML = q.question;
   n = Math.min(cmain('answer').length, q.answers.length);
@@ -81,3 +86,15 @@ question_update = () => {
   // console.log(cmain('answer').map((x) => x.getAttribute('c')%7));
 };
 question_update();
+var start = Date.now() / 1000;
+timer_update = () => {
+  let s = '';
+  let t = Date.now() / 1000 - start;
+  s += ('0' + ((t / 60) | 0)).slice(-2);
+  s += ':';
+  s += ('0' + (t % 60 | 0)).slice(-2);
+  cmain('timer')[0].innerText = s;
+  console.log(s);
+};
+var timer = setInterval(timer_update, 1000);
+cmain('timer');
