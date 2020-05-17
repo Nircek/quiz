@@ -86,6 +86,14 @@ background-image: linear-gradient(to bottom right, rgb(255,241,197), rgb(233,218
   min-height: calc(30vh - 4em - 40px);
   flex-grow: 1;
 }
+.footer {
+  min-width: calc(70vw - 2em);
+  flex-grow: 1;
+  background-color: #000;
+  color: #fff;
+  font-size: .7em;
+  text-align: center;
+}
 .aa {
 background-color: #F42323;
 background-image: linear-gradient(to bottom right, rgb(255,0,0), rgb(185,28,28));

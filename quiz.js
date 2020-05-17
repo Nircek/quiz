@@ -14,22 +14,7 @@ var data = {
     },
   ],
 };
-var main = document.getElementById('main');
-if (main === null) {
-  document.getElementsByClassName('question')[0].parentElement.id = 'main';
-  var main = document.getElementById('main');
-}
-cmain = (x, i = true) =>
-  i
-    ? [...main.getElementsByClassName(x)].map(
-        (y) =>
-          ['p', 'img']
-            .map((t) => y.getElementsByTagName(t))
-            .map((t) => (t.length ? t[0] : null))
-            .filter((t) => t !== null)[0]
-      )
-    : [...main.getElementsByClassName(x)];
-var question_i = 0;
+
 function permute(permutation) {
   // https://stackoverflow.com/a/37580979/6732111
   var length = permutation.length,
@@ -55,6 +40,24 @@ function permute(permutation) {
   }
   return result;
 }
+
+var main = document.getElementById('main');
+if (main === null) {
+  document.getElementsByClassName('question')[0].parentElement.id = 'main';
+  var main = document.getElementById('main');
+}
+cmain = (x, i = true) =>
+  i
+    ? [...main.getElementsByClassName(x)].map(
+        (y) =>
+          ['p', 'img']
+            .map((t) => y.getElementsByTagName(t))
+            .map((t) => (t.length ? t[0] : null))
+            .filter((t) => t !== null)[0]
+      )
+    : [...main.getElementsByClassName(x)];
+var question_i = 0;
+cmain('footer')[0].innerHTML = data.author;
 question_update = () => {
   let q = data.questions[question_i];
   cmain('question')[0].innerHTML = q.question;
