@@ -64,8 +64,7 @@ background-image: linear-gradient(to bottom right, rgb(255,241,197), rgb(233,218
   overflow: hidden;
 }
 .pic > img {
-  height: 100%;
-  width: auto;
+  height: 100%; width: 100%; object-fit: contain;
 }
 .question {
 background-color: #FFF1C5;
@@ -76,8 +75,11 @@ background-image: linear-gradient(to bottom right, rgb(255,241,197), rgb(233,218
   overflow: hidden;
   flex-grow: 1;
 }
-.noimg {
+.question.noimg {
   min-width: calc(70vw - 2em);
+}
+.pic.noimg {
+  display: none;
 }
 .answer {
   min-width: 34vw;
