@@ -1,23 +1,19 @@
 'use strict';
 var data = {
-  title: 'Maths - question',
+  title: 'Maths',
+  welcome:
+    '<b>Hello!</b><br/>This is a quiz about maths. It contains {length} questions. Click the button below!',
+  end: '<b>This is the end!</b><br/>You got {points_i} points in {timer} time.',
+  play: 'Play!',
+  try_again: 'Try again!',
+  counter: '{title} - question {question_i}/{length}',
   author: 'Nircek',
-  points: 'points',
+  points: '{points_i} points',
   questions: [
     {
       question: '2+2=?',
       img: null,
       answers: ['4', '3', '5', '2'],
-    },
-    {
-      question: '2*2=?',
-      img: 'https://images.pexels.com/photos/374918/pexels-photo-374918.jpeg',
-      answers: ['4', '16', '7', '6'],
-    },
-    {
-      question: '2*2=?',
-      img: 'https://images.pexels.com/photos/374918/pexels-photo-374918.jpeg',
-      answers: ['4', '16', '7', '6'],
     },
     {
       question: '2*2=?',
@@ -53,37 +49,51 @@ function permute(permutation) {
   return result;
 }
 
+var format = (str, r = data) =>
+  str.replace(/{\w+}/g, function (all) {
+    let x = r[all.slice(1, -1)];
+    if (typeof x == 'number') x = x.toString();
+    return x || all;
+  });
+
 var main = document.getElementById('main');
 if (main === null) {
   document.getElementsByClassName('question')[0].parentElement.id = 'main';
   var main = document.getElementById('main');
 }
-var cmain = (x, i = true) =>
+var welcome = document.getElementById('welcome');
+
+var cmain = (x, i = true, glob = main) =>
   i
-    ? [...main.getElementsByClassName(x)].map(
+    ? [...glob.getElementsByClassName(x)].map(
         (y) =>
           ['p', 'img']
             .map((t) => y.getElementsByTagName(t))
             .map((t) => (t.length ? t[0] : null))
             .filter((t) => t !== null)[0]
       )
-    : [...main.getElementsByClassName(x)];
-var question_i = 0;
-var points = 0;
-cmain('footer')[0].innerHTML = data.author;
+    : [...glob.getElementsByClassName(x)];
+
+data.question_i = 1;
+data.points_i = 0;
+data.length = data.questions.length;
+
+cmain('title', 1, welcome)[0].innerHTML = format(data.title);
+cmain('welcome', 1, welcome)[0].innerHTML = format(data.welcome);
+cmain('play', 1, welcome)[0].innerHTML = format(data.play);
+
 var question_update = (end = false) => {
-  cmain('counter')[0].innerHTML =
-    data.title + ' ' + (question_i + 1) + '/' + data.questions.length;
-  cmain('points')[0].innerHTML = points + ' ' + data.points;
-  let q = data.questions[question_i];
-  cmain('question')[0].innerHTML = q.question;
+  cmain('counter')[0].innerHTML = format(data.counter);
+  cmain('points')[0].innerHTML = format(data.points);
+  let q = data.questions[data.question_i - 1];
+  cmain('question')[0].innerHTML = format(q.question);
   let n = Math.min(cmain('answer').length, q.answers.length);
   let perms = permute([...Array(n).keys()]);
   perms = perms[(Math.random() * perms.length) | 0];
   if (!end)
     for (let i = 0; i < n; ++i) {
       let e = cmain('answer')[perms[i]];
-      e.innerHTML = q.answers[i];
+      e.innerHTML = format(q.answers[i]);
       let seven = 7 * (((1 << 28) * Math.random() - 7) | 0);
       e.parentElement.setAttribute(
         'c',
@@ -93,19 +103,20 @@ var question_update = (end = false) => {
   if (q.img) {
     cmain('question', false)[0].classList.remove('noimg');
     cmain('pic', false)[0].classList.remove('noimg');
-    cmain('pic')[0].src = q.img;
+    cmain('pic')[0].src = format(q.img);
   } else {
     cmain('question', false)[0].classList.add('noimg');
     cmain('pic', false)[0].classList.add('noimg');
   }
+  cmain('footer')[0].innerHTML = data.author;
   // console.log(cmain('answer', 0).map((x) => x.getAttribute('c')%7));
 };
+
 var question_unlock = () =>
   cmain('answer', 0).map((x) => x.setAttribute('onclick', 'select(this)'));
 var question_lock = () =>
   cmain('answer', 0).map((x) => x.removeAttribute('onclick'));
-question_update();
-var start = Date.now() / 1000;
+
 var timer_update = () => {
   let s = '';
   let t = Date.now() / 1000 - start;
@@ -113,31 +124,53 @@ var timer_update = () => {
   s += ':';
   s += ('0' + (t % 60 | 0)).slice(-2);
   cmain('timer')[0].innerText = s;
+  return s;
 };
-var timer = setInterval(timer_update, 1000);
-cmain('timer');
+
 var select = (e) => {
   question_lock();
-  if (e.getAttribute('c') % 7) ++points;
-  if (++question_i == data.questions.length) {
-    --question_i;
+  if (e.getAttribute('c') % 7) ++data.points_i;
+  let end = ++data.question_i == data.questions.length + 1;
+  if (end) {
     clearInterval(timer);
+    data.timer = timer_update();
     question_update(1);
-  } else {
-    let next = main.cloneNode(1);
-    next.id = 'next';
-    main.parentElement.append(next);
-    let prev = main;
-    main = next;
-    question_update();
-    setTimeout(() => {
-      prev.id = 'prev';
-      main.id = 'main';
-      setTimeout(() => {
-        question_unlock();
-        main.parentElement.removeChild(prev);
-      }, 2000);
-    }, 100);
+
+    data.question_i = 1;
+    welcome.id = 'welcome';
+    cmain('title', 1, welcome)[0].innerHTML = format(data.title);
+    cmain('welcome', 1, welcome)[0].innerHTML = format(data.end);
+    cmain('play', 1, welcome)[0].innerHTML = format(data.try_again);
   }
+
+  let next = main.cloneNode(1);
+  next.id = 'next';
+  if (end) main.parentElement.append(welcome);
+  main.parentElement.append(next);
+  let prev = main;
+  main = next;
+  question_update();
+  setTimeout(() => {
+    prev.id = 'prev';
+    main.id = 'main';
+    setTimeout(() => {
+      question_unlock();
+      main.parentElement.removeChild(prev);
+    }, 2000);
+  }, 100);
 };
-question_unlock();
+
+var start, timer;
+
+var reset = () => {
+  welcome.id = 'prev';
+  question_unlock();
+  start = Date.now() / 1000;
+  timer = setInterval(timer_update, 1000);
+  setTimeout(() => {
+    question_unlock();
+    welcome.parentElement.removeChild(welcome);
+  }, 2000);
+};
+
+question_update();

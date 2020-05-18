@@ -5,7 +5,7 @@ body {
   background-color: #d9fcff;
 }
 #container {
-  width: 200vw;
+  width: 300vw;
 }
 .timer,
 .counter,
@@ -61,6 +61,36 @@ body {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+.title {
+  background-color: #f7c2f7;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(249, 205, 249),
+    rgb(235, 155, 235),
+    rgb(194, 116, 194)
+  );
+  min-width: calc(92vw - 22ch - 42px);
+  flex-grow: 1;
+  text-align: center;
+}
+.welcome {
+  background-color: #fff1c5;
+  min-width: 90vw;
+  min-height: 70vh;
+  flex-grow: 1;
+}
+.play {
+  background-color: #f42323;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 0, 0),
+    rgb(185, 28, 28)
+  );
+  min-width: 90vw;
+  text-align: center;
+  font-size: 2em;
+  flex-grow: 1;
 }
 .counter {
   min-width: calc(92vw - 22ch - 42px);
