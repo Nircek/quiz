@@ -15,12 +15,12 @@
   "questions": [
     {
       "question": "Kiedy po raz pierwszy zastosowano sztuczną nerkę?",
-      "img": null,
+      "img": "https://images.unsplash.com/photo-1559757175-9e351c9a1301?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80",
       "answers": ["1944", "1960", "1981", "1993"]
     },
     {
       "question": "W styczniu 1998 r. 22 kraje należące do Rady Europy podpisały dokument...",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Bundesarchiv_B_145_Bild-F023908-0002%2C_Stra%C3%9Fburg%2C_Tagung_des_Europarates.jpg",
       "answers": [
         "zakazujący klonowania ludzi",
         "regulujący badania nad modyfikacjami genetycznymi",
@@ -30,7 +30,7 @@
     },
     {
       "question": "W informatyce w 1971 roku:",
-      "img": null,
+      "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       "answers": [
         "stało się możliwe przesyłanie poczty komputerowej",
         "podjęto pierwsze próby łączności za pomocą internetu",
@@ -40,7 +40,7 @@
     },
     {
       "question": "Utwory jakiego kompozytora przenosi sonda Pionier 10?",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pioneer_10_Construction.jpg/800px-Pioneer_10_Construction.jpg",
       "answers": [
         "Jana Sebastiana Bacha",
         "Wolfganga Amadeusza Mozarta",
@@ -50,12 +50,12 @@
     },
     {
       "question": "W którym roku rosyjski kosmonauta Jurij Gagarin dokonał lotu wokół Ziemi?",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/b/b8/%D0%93%D0%B0%D0%B3%D0%B0%D1%80%D0%B8%D0%BD_%D0%B2_%D0%BA%D0%BE%D1%80%D0%B0%D0%B1%D0%BB%D0%B5.jpg",
       "answers": ["1961", "1946", "1975", "1952"]
     },
     {
       "question": "W jakim celu Thor Heyerdahl przepłynął Atlantyk?",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Expedition_Kon-Tiki_1947._Across_the_Pacific._%288765728430%29.jpg/1280px-Expedition_Kon-Tiki_1947._Across_the_Pacific._%288765728430%29.jpg",
       "answers": [
         "aby udowodnić teorię mówiącą, że starożytne cywilizacje miały ze sobą kontakt",
         "aby badać migracje ryb",
@@ -65,7 +65,7 @@
     },
     {
       "question": "Kiedy zaprzestano szczepień przeciwko ospie prawdziwej?",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Smallpox.jpg/1920px-Smallpox.jpg",
       "answers": [
         "w latach siedemdziesiątych",
         "w latach dziewięćdziesiątych",
@@ -75,7 +75,7 @@
     },
     {
       "question": "Ile ludzi musi się wyżywić za 1 dolara dziennie?",
-      "img": null,
+      "img": "https://i.wpimg.pl/730x0/m.fotoblogia.pl/vulture-child-d7cfed85715b2eb592.jpg",
       "answers": [
         "ponad miliard",
         "ok. 50 milionów",
@@ -85,7 +85,7 @@
     },
     {
       "question": "Jaka grupa ludzi została porwana w Monachium w 1972 podczas igrzysk?",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Olympic_Hall%2C_Munich%2C_under_construction.jpg",
       "answers": [
         "sportowcy izraelscy",
         "kibice rosyjscy",
@@ -100,7 +100,7 @@
     },
     {
       "question": "W którym roku pojawiły się w telewizji pierwsze programy nadawane techniką barwną?",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/WZE_Ametyst.jpg/1280px-WZE_Ametyst.jpg",
       "answers": ["1950", "1960", "1970", "1980"]
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "question": "Chuck Berry był jednym z pierwszych twórców...",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Chuck_Berry_1957.jpg/800px-Chuck_Berry_1957.jpg",
       "answers": [
         "rock and roll-a",
         "rythm and bluesa",
@@ -130,7 +130,7 @@
     },
     {
       "question": "Który z tych polskich kompozytorów umarł najpóźniej?",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Krzysztof.Penderecki.JPG",
       "answers": [
         "Krzysztof Penderecki",
         "Igor Strawiński",
@@ -140,7 +140,7 @@
     },
     {
       "question": "Które stwierdzenie o Marii Callas nie jest prawdziwe?",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Maria_Callas_1958.jpg",
       "answers": [
         "śpiewała w operze partie altu",
         "jej prawdziwe nazwisko to Kalojeropulo",
@@ -149,8 +149,8 @@
       ]
     },
     {
-      "question": "Kim jest bohater powieści “Upadek” Alberta Camusa (czyt. kami)?",
-      "img": null,
+      "question": "Kim jest bohater powieści „Upadek” Alberta Camusa (czyt. kami)?",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/0/08/Albert_Camus%2C_gagnant_de_prix_Nobel%2C_portrait_en_buste%2C_pos%C3%A9_au_bureau%2C_faisant_face_%C3%A0_gauche%2C_cigarette_de_tabagisme.jpg",
       "answers": [
         "bogatym adwokatem",
         "bezrobotnym młodzieńcem",
@@ -170,7 +170,7 @@
     },
     {
       "question": "Malarz Salvador Dali był czołowym przedstawicielem...",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Salvador_Dali_NYWTS.jpg/785px-Salvador_Dali_NYWTS.jpg",
       "answers": [
         "surrealizmu",
         "ekspresjonizmu abstrakcyjnego",
@@ -180,7 +180,7 @@
     },
     {
       "question": "Czego nie można powiedzieć o rzeźbie kinetycznej?",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/David_Ascalon_Kinetic_Sculpture_Mobile_memphis_TN.JPG/800px-David_Ascalon_Kinetic_Sculpture_Mobile_memphis_TN.JPG",
       "answers": [
         "nie może być wykonana z tworzyw sztucznych",
         "ma elementy, które poruszają się np. na wietrze",
@@ -190,7 +190,7 @@
     },
     {
       "question": "Kiedy graffiti zyskało na popularności?",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/2014_K%C5%82odzko%2C_graffiti_01.jpg/800px-2014_K%C5%82odzko%2C_graffiti_01.jpg",
       "answers": [
         "w latach siedemdziesiątych",
         "w latach pięćdziesiątych",
@@ -200,7 +200,7 @@
     },
     {
       "question": "Czego nie można powiedzieć o Edouardzie Jeannercie?",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Le_Corbusier_%281964%29.jpg/1024px-Le_Corbusier_%281964%29.jpg",
       "answers": [
         "był Brytyjczykiem",
         "był znany jako Le Corbusier",
@@ -210,7 +210,7 @@
     },
     {
       "question": "Co nie było przyczyną budowania w stylu modernistycznym?",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/8/89/Robie_House.jpg",
       "answers": [
         "Le Corbusier miał duże wpływy w rządzie brytyjskim",
         "zmniejszające się miejsce na zabudowę",
@@ -220,7 +220,7 @@
     },
     {
       "question": "Twórcy Centrum Pompidou w Paryżu celowo umieścili na zewnętrznych ścianach rury, windy i ciągi komunikacyjne, aby uwidocznić strukturę budowli. Jaki to nurt architektoniczny?",
-      "img": null,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/e/ee/014_Pompidou_Centre_%2848826556313%29.jpg",
       "answers": [
         "high-tech",
         "architektura organiczna",
