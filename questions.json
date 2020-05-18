@@ -1,0 +1,32 @@
+{
+  "title": "Maths",
+  "welcome": "<b>Hello!</b><br/>This is a quiz about maths. It contains {length} questions. Click the button below!",
+  "end": "<b>This is the end!</b><br/>You got {points_i} points in {timer} time.",
+  "play": "Play!",
+  "try_again": "Try again!",
+  "counter": "{title} - question {question_i}/{length}",
+  "author": "Nircek",
+  "points": "{points_i} points",
+  "questions": [
+    {
+      "question": "2+2=?",
+      "img": null,
+      "answers": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ]
+    },
+    {
+      "question": "2*2=?",
+      "img": "https://images.pexels.com/photos/374918/pexels-photo-374918.jpeg",
+      "answers": [
+        "4",
+        "16",
+        "7",
+        "6"
+      ]
+    }
+  ]
+}

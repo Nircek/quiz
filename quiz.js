@@ -1,27 +1,17 @@
 'use strict';
-var data = {
-  title: 'Maths',
-  welcome:
-    '<b>Hello!</b><br/>This is a quiz about maths. It contains {length} questions. Click the button below!',
-  end: '<b>This is the end!</b><br/>You got {points_i} points in {timer} time.',
-  play: 'Play!',
-  try_again: 'Try again!',
-  counter: '{title} - question {question_i}/{length}',
-  author: 'Nircek',
-  points: '{points_i} points',
-  questions: [
-    {
-      question: '2+2=?',
-      img: null,
-      answers: ['4', '3', '5', '2'],
-    },
-    {
-      question: '2*2=?',
-      img: 'https://images.pexels.com/photos/374918/pexels-photo-374918.jpeg',
-      answers: ['4', '16', '7', '6'],
-    },
-  ],
+var data;
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    data = JSON.parse(this.responseText);
+    init();
+  }
 };
+xmlhttp.onerror = () =>
+  alert('There was a problem with retrieving file with questions...');
+xmlhttp.open('GET', './questions.json', true);
+xmlhttp.send();
 
 function permute(permutation) {
   // https://stackoverflow.com/a/37580979/6732111
@@ -73,14 +63,6 @@ var cmain = (x, i = true, glob = main) =>
             .filter((t) => t !== null)[0]
       )
     : [...glob.getElementsByClassName(x)];
-
-data.question_i = 1;
-data.points_i = 0;
-data.length = data.questions.length;
-
-cmain('title', 1, welcome)[0].innerHTML = format(data.title);
-cmain('welcome', 1, welcome)[0].innerHTML = format(data.welcome);
-cmain('play', 1, welcome)[0].innerHTML = format(data.play);
 
 var question_update = (end = false) => {
   cmain('counter')[0].innerHTML = format(data.counter);
@@ -173,4 +155,14 @@ var reset = () => {
   }, 2000);
 };
 
-question_update();
+var init = () => {
+  data.question_i = 1;
+  data.points_i = 0;
+  data.length = data.questions.length;
+
+  cmain('title', 1, welcome)[0].innerHTML = format(data.title);
+  cmain('welcome', 1, welcome)[0].innerHTML = format(data.welcome);
+  cmain('play', 1, welcome)[0].innerHTML = format(data.play);
+
+  question_update();
+};
