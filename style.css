@@ -3,6 +3,7 @@ body {
   margin: 8px;
   font-size: 3vmin;
   background-color: #d9fcff;
+  text-align: center;
 }
 #container {
   width: 300vw;
@@ -81,6 +82,7 @@ body {
   flex-grow: 1;
 }
 .play {
+  cursor: pointer;
   background-color: #f42323;
   background-image: linear-gradient(
     to bottom right,
@@ -91,6 +93,15 @@ body {
   text-align: center;
   font-size: 2em;
   flex-grow: 1;
+}
+.play:hover {
+  background-color: #f7c2f7;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(249, 205, 249),
+    rgb(235, 155, 235),
+    rgb(194, 116, 194)
+  );
 }
 .counter {
   min-width: calc(92vw - 22ch - 42px);
@@ -135,9 +146,19 @@ body {
   display: none;
 }
 .answer {
+  cursor: pointer;
   min-width: 34vw;
   min-height: calc(30vh - 4em - 40px);
   flex-grow: 1;
+}
+.answer:hover {
+  background-color: #f7c2f7;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(249, 205, 249),
+    rgb(235, 155, 235),
+    rgb(194, 116, 194)
+  );
 }
 .footer {
   min-width: calc(70vw - 2em);
@@ -177,5 +198,13 @@ body {
     to bottom right,
     rgb(0, 144, 255),
     rgb(40, 104, 155)
+  );
+}
+.incorrect {
+  background-color: #1382d8;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(216, 216, 216),
+    rgb(140, 140, 140)
   );
 }
