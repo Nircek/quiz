@@ -64,9 +64,15 @@ var cmain = (x, i = true, glob = main) =>
       )
     : [...glob.getElementsByClassName(x)];
 
+var points_update = () => {
+  for (let e of data.points_str_list)
+    if (RegExp(e.split('-->')[0]).test(data.points_i.toString()))
+      data.points_str = e.split('-->')[1];
+  cmain('points')[0].innerHTML = format(data.points);
+};
 var question_update = (end = false) => {
   cmain('counter')[0].innerHTML = format(data.counter);
-  cmain('points')[0].innerHTML = format(data.points);
+  points_update();
   let q = data.questions[data.question_i - 1];
   cmain('question')[0].innerHTML = format(q.question);
   let n = Math.min(cmain('answer').length, q.answers.length);
@@ -113,6 +119,7 @@ var select = (e) => {
   question_lock();
   let next = main.cloneNode(1);
   if (e.getAttribute('c') % 7) ++data.points_i;
+  points_update();
   cmain('answer', 0).map((x) => {
     x.classList.remove('hovered');
     if (!(x.getAttribute('c') % 7)) {
@@ -129,6 +136,7 @@ var select = (e) => {
     data.question_i = 1;
 
     welcome.id = 'welcome';
+    points_update();
     cmain('title', 1, welcome)[0].innerHTML = format(data.title);
     cmain('welcome', 1, welcome)[0].innerHTML = format(data.end);
     cmain('play', 1, welcome)[0].innerHTML = format(data.try_again);
@@ -154,6 +162,8 @@ var start, timer;
 
 var reset = () => {
   welcome.id = 'prev';
+  data.points_i = 0;
+  question_update();
   question_unlock();
   start = Date.now() / 1000;
   timer = setInterval(timer_update, 1000);
