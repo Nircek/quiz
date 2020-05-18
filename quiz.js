@@ -113,12 +113,13 @@ var select = (e) => {
   question_lock();
   if (e.getAttribute('c') % 7) ++data.points_i;
   let end = ++data.question_i == data.questions.length + 1;
+  console.log(data.question_i, data.questions.length + 1, end);
   if (end) {
     clearInterval(timer);
     data.timer = timer_update();
+    data.question_i = 1;
     question_update(1);
 
-    data.question_i = 1;
     welcome.id = 'welcome';
     cmain('title', 1, welcome)[0].innerHTML = format(data.title);
     cmain('welcome', 1, welcome)[0].innerHTML = format(data.end);
