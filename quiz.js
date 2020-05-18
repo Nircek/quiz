@@ -47,10 +47,6 @@ var format = (str, r = data) =>
   });
 
 var main = document.getElementById('main');
-if (main === null) {
-  document.getElementsByClassName('question')[0].parentElement.id = 'main';
-  var main = document.getElementById('main');
-}
 var welcome = document.getElementById('welcome');
 
 var cmain = (x, i = true, glob = main) =>
@@ -89,11 +85,11 @@ var question_update = (end = false) => {
       );
     }
   if (q.img) {
-    cmain('question', false)[0].classList.remove('noimg');
+    cmain('pic', false)[0].parentElement.classList.remove('noimg');
     cmain('pic', false)[0].classList.remove('noimg');
     cmain('pic')[0].src = format(q.img);
   } else {
-    cmain('question', false)[0].classList.add('noimg');
+    cmain('pic', false)[0].parentElement.classList.add('noimg');
     cmain('pic', false)[0].classList.add('noimg');
   }
   cmain('footer')[0].innerHTML = data.author;

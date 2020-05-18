@@ -4,81 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="structure.css" />
+    <link rel="stylesheet" href="colors.css" />
     <script src="quiz.js" defer></script>
   </head>
 
   <body>
     <div id="container">
-      <div class="flex" id="welcome">
-        <div class="flex-item title">
-          <p>Lorem ipsum dolor sit.</p>
+      <div class="flex-horizontal" id="welcome">
+        <div class="title flex-item">
+          <p></p>
         </div>
-        <div class="flex-item welcome">
+        <div class="welcome flex-item growing">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            qui, ab dolor quibusdam corrupti porro iusto corporis dolorum totam
-            delectus recusandae aspernatur nemo. Saepe aliquid at corporis
-            officia optio earum pariatur placeat, dignissimos odit sequi. Sit,
-            architecto. Magnam sed fugiat, consectetur pariatur iste sequi
-            facere officia aliquam nihil? Neque a dolores error, tenetur ut
-            consequatur qui reprehenderit velit maiores totam delectus quibusdam
-            necessitatibus id, mollitia quae deserunt, odit libero enim. Aliquam
-            minima beatae omnis, quae quasi incidunt expedita suscipit, iusto,
-            similique nisi ut hic dolor nam. Explicabo nisi excepturi quisquam
-            repudiandae culpa aperiam, architecto voluptatibus pariatur porro
-            quos possimus libero!
+            <b>Waiting for files...</b>
           </p>
         </div>
-        <div class="flex-item play hovered" onclick="reset()">
-          <p>
-            Lorem ipsum dolor sit amet.
-          </p>
+        <div class="play hovered flex-item min-growing" onclick="reset()">
+          <p></p>
         </div>
       </div>
-      <div class="flex">
-        <div class="timer">
-          <p>00:00</p>
+      <div class="flex-horizontal" id="main">
+        <div class="flex-vertical">
+          <div class="timer flex-item">
+            <p></p>
+          </div>
+          <div class="counter flex-item growing">
+            <p></p>
+          </div>
+          <div class="points flex-item min-growing">
+            <p></p>
+          </div>
         </div>
-        <div class="counter">
-          <p>
-            Lorem, ipsum 2
-          </p>
+        <div class="flex-vertical">
+          <div class="pic flex-item">
+            <img src="https://via.placeholder.com/600" alt="Picture" />
+          </div>
+          <div class="question flex-item growing">
+            <p></p>
+          </div>
         </div>
-        <div class="points">
-          <p>20 points</p>
+        <div class="flex-vertical growing">
+          <div class="answer hovered aa flex-item growing">
+            <p></p>
+          </div>
+          <div class="answer hovered ab flex-item growing">
+            <p></p>
+          </div>
         </div>
-        <div class="pic">
-          <img src="https://via.placeholder.com/600" alt="Picture" />
+        <div class="flex-vertical growing">
+          <div class="answer hovered ac flex-item growing">
+            <p></p>
+          </div>
+          <div class="answer hovered ad flex-item growing">
+            <p></p>
+          </div>
         </div>
-        <div class="question">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero,
-            sit. Incidunt, vitae! Ipsam, laudantium ipsa? Fuga voluptatibus
-            perferendis dolores harum consectetur magnam, eveniet error ullam.
-            Delectus error doloremque nesciunt, vitae blanditiis consequatur
-            accusantium, consequuntur obcaecati fugiat sapiente enim eligendi
-            debitis fugit? Necessitatibus veniam ducimus sit quidem pariatur
-            possimus quod facilis?
-          </p>
-        </div>
-        <div class="answer hovered aa">
-          <p>Lorem, ipsum dolor.</p>
-        </div>
-        <div class="answer hovered ab">
-          <p>Temporibus, ad itaque!</p>
-        </div>
-        <div class="answer hovered ac">
-          <p>Provident, quod explicabo!</p>
-        </div>
-        <div class="answer hovered ad">
-          <p>Quisquam, beatae perferendis!</p>
-        </div>
-        <div class="footer">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
-            doloremque.
-          </p>
+        <div class="flex-vertical">
+          <div class="footer flex-item growing">
+            <p></p>
+          </div>
         </div>
       </div>
     </div>
