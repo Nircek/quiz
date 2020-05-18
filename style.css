@@ -2,7 +2,7 @@ body {
   overflow: hidden;
   margin: 8px;
   font-size: 3vmin;
-background-color: #D9FCFF;
+  background-color: #d9fcff;
 }
 #container {
   width: 200vw;
@@ -10,8 +10,13 @@ background-color: #D9FCFF;
 .timer,
 .counter,
 .points {
-background-color: #F7C2F7;
-background-image: linear-gradient(to bottom right, rgb(249,205,249), rgb(235,155,235), rgb(194,116,194));
+  background-color: #f7c2f7;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(249, 205, 249),
+    rgb(235, 155, 235),
+    rgb(194, 116, 194)
+  );
 }
 .timer p,
 .counter p,
@@ -27,16 +32,15 @@ background-image: linear-gradient(to bottom right, rgb(249,205,249), rgb(235,155
   justify-content: stretch;
   align-content: stretch;
   align-items: stretch;
-  float:left;
+  float: left;
 }
 #prev {
   transition: margin-left 1.5s;
   margin-left: -100vw;
 }
 .flex > div {
-
-box-shadow: 5px 3px 4px 0 rgba(0, 0, 0, 1);
-border-radius: 20px;
+  box-shadow: 5px 3px 4px 0 rgba(0, 0, 0, 1);
+  border-radius: 20px;
   margin: 5px;
   padding: 0.5em 1vw;
   flex-basis: 0;
@@ -66,18 +70,28 @@ border-radius: 20px;
   min-width: 13ch;
 }
 .pic {
-background-color: #FFF1C5;
-background-image: linear-gradient(to bottom right, rgb(255,241,197), rgb(233,218,170));
+  background-color: #fff1c5;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 241, 197),
+    rgb(233, 218, 170)
+  );
   min-width: 40vmin;
   max-height: 50vh;
   overflow: hidden;
 }
 .pic > img {
-  height: 100%; width: 100%; object-fit: contain;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 .question {
-background-color: #FFF1C5;
-background-image: linear-gradient(to bottom right, rgb(255,241,197), rgb(233,218,170));
+  background-color: #fff1c5;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 241, 197),
+    rgb(233, 218, 170)
+  );
   min-width: calc(70vw - 40vmin - 2em);
   min-height: 40vmin;
   max-height: 50vh;
@@ -100,22 +114,38 @@ background-image: linear-gradient(to bottom right, rgb(255,241,197), rgb(233,218
   flex-grow: 1;
   background-color: #000;
   color: #fff;
-  font-size: .7em;
+  font-size: 0.7em;
   text-align: center;
 }
 .aa {
-background-color: #F42323;
-background-image: linear-gradient(to bottom right, rgb(255,0,0), rgb(185,28,28));
+  background-color: #f42323;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 0, 0),
+    rgb(185, 28, 28)
+  );
 }
 .ab {
-background-color: #0FC418;
-background-image: linear-gradient(to bottom right, rgb(0,255,0), rgb(32,121,36));
+  background-color: #0fc418;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(0, 255, 0),
+    rgb(32, 121, 36)
+  );
 }
 .ac {
-background-color: yellow;
-background-image: linear-gradient(to bottom right, rgb(255,255,0), rgb(172,172,41));
+  background-color: yellow;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 255, 0),
+    rgb(172, 172, 41)
+  );
 }
 .ad {
-background-color: #1382D8;
-background-image: linear-gradient(to bottom right, rgb(0,144,255), rgb(40,104,155));
+  background-color: #1382d8;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(0, 144, 255),
+    rgb(40, 104, 155)
+  );
 }
