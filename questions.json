@@ -1,26 +1,232 @@
 {
-  "title": "Maths",
-  "welcome": "<b>Hello!</b><br/>This is a quiz about maths. It contains {length} questions. Click the button below!",
-  "end": "<b>This is the end!</b><br/>You got {points_i} {points_str} in {timer} time.",
-  "play": "Play!",
-  "try_again": "Try again!",
-  "counter": "{title} - question {question_i}/{length}",
-  "author": "Nircek",
+  "title": "Kultura i nauka XX w.",
+  "welcome": "<b>Witaj!</b><br/><br/>Przedstawiamy Ci krótki quiz historyczny o kulturze i nauce XX w. Składa się on z {length} pytań. Miłej zabawy!",
+  "end": "<b>Świetnie Ci poszło!</b><br/><br/>Zdobyłeś {points_i} {points_str} w {timer}.",
+  "play": "Rozpocznij",
+  "try_again": "Zagraj jeszcze raz!",
+  "counter": "{title} - pytanie {question_i}/{length}",
+  "author": "Nircek, Monika452",
   "points_str_list": [
-    "-->points",
-    "^1$-->point"
+    "-->punktów",
+    "^(2|3|4|22|23|24)$-->punkty",
+    "^1$-->punkt"
   ],
   "points": "{points_i} {points_str}",
   "questions": [
     {
-      "question": "2+2=?",
+      "question": "Kiedy po raz pierwszy zastosowano sztuczną nerkę?",
       "img": null,
-      "answers": ["4", "3", "5", "2"]
+      "answers": ["1944", "1960", "1981", "1993"]
     },
     {
-      "question": "2*2=?",
-      "img": "https://images.pexels.com/photos/374918/pexels-photo-374918.jpeg",
-      "answers": ["4", "16", "7", "6"]
+      "question": "W styczniu 1998 r. 22 kraje należące do Rady Europy podpisały dokument...",
+      "img": null,
+      "answers": [
+        "zakazujący klonowania ludzi",
+        "regulujący badania nad modyfikacjami genetycznymi",
+        "zawiązujący NATO",
+        "zakazujący słuchania muzyki techno"
+      ]
+    },
+    {
+      "question": "W informatyce w 1971 roku:",
+      "img": null,
+      "answers": [
+        "stało się możliwe przesyłanie poczty komputerowej",
+        "podjęto pierwsze próby łączności za pomocą internetu",
+        "został zbudowany pierwszy mikroprocesor",
+        "powstał system www"
+      ]
+    },
+    {
+      "question": "Utwory jakiego kompozytora przenosi sonda Pionier 10?",
+      "img": null,
+      "answers": [
+        "Jana Sebastiana Bacha",
+        "Wolfganga Amadeusza Mozarta",
+        "Fryderyka Chopina",
+        "Antonio Vivaldiego"
+      ]
+    },
+    {
+      "question": "W którym roku rosyjski kosmonauta Jurij Gagarin dokonał lotu wokół Ziemi?",
+      "img": null,
+      "answers": ["1961", "1946", "1975", "1952"]
+    },
+    {
+      "question": "W jakim celu Thor Heyerdahl przepłynął Atlantyk?",
+      "img": null,
+      "answers": [
+        "aby udowodnić teorię mówiącą, że starożytne cywilizacje miały ze sobą kontakt",
+        "aby badać migracje ryb",
+        "brał udział w regatach",
+        "testował nowy rodzaj łodzi"
+      ]
+    },
+    {
+      "question": "Kiedy zaprzestano szczepień przeciwko ospie prawdziwej?",
+      "img": null,
+      "answers": [
+        "w latach siedemdziesiątych",
+        "w latach dziewięćdziesiątych",
+        "nie było na nią szczepionki",
+        "nadal się przeciwko niej szczepi"
+      ]
+    },
+    {
+      "question": "Ile ludzi musi się wyżywić za 1 dolara dziennie?",
+      "img": null,
+      "answers": [
+        "ponad miliard",
+        "ok. 50 milionów",
+        "nieco mniej niż miliard",
+        "mniej więcej 70 milionów"
+      ]
+    },
+    {
+      "question": "Jaka grupa ludzi została porwana w Monachium w 1972 podczas igrzysk?",
+      "img": null,
+      "answers": [
+        "sportowcy izraelscy",
+        "kibice rosyjscy",
+        "dziennikarze niemieccy",
+        "organizatorzy"
+      ]
+    },
+    {
+      "question": "Kim są Ingar Bergmann, Vittorio de Sica i Federico Fellini?",
+      "img": null,
+      "answers": ["reżyserami", "aktorami", "muzykami", "alpinistami"]
+    },
+    {
+      "question": "W którym roku pojawiły się w telewizji pierwsze programy nadawane techniką barwną?",
+      "img": null,
+      "answers": ["1950", "1960", "1970", "1980"]
+    },
+    {
+      "question": "Która z wymienionych osób nie jest aktorem?",
+      "img": null,
+      "answers": [
+        "Edmund Hillary",
+        "Marlon Brando",
+        "Elizabeth Taylor",
+        "Marylin Monroe"
+      ]
+    },
+    {
+      "question": "Chuck Berry był jednym z pierwszych twórców...",
+      "img": null,
+      "answers": [
+        "rock and roll-a",
+        "rythm and bluesa",
+        "heavy metalu",
+        "hip-hopu"
+      ]
+    },
+    {
+      "question": "Który z tych gatunków muzycznych nie powstał w latach osiemdziesiątych i dziewięćdziesiątych?",
+      "img": null,
+      "answers": ["country", "pop", "hip-hop", "muzyka techno"]
+    },
+    {
+      "question": "Który z tych polskich kompozytorów umarł najpóźniej?",
+      "img": null,
+      "answers": [
+        "Krzysztof Penderecki",
+        "Igor Strawiński",
+        "Henryk Mikołaj Górecki",
+        "Witold Lutosławski"
+      ]
+    },
+    {
+      "question": "Które stwierdzenie o Marii Callas nie jest prawdziwe?",
+      "img": null,
+      "answers": [
+        "śpiewała w operze partie altu",
+        "jej prawdziwe nazwisko to Kalojeropulo",
+        "zmarła w 1977 roku",
+        "rozpoczęła karierę w 1940 roku"
+      ]
+    },
+    {
+      "question": "Kim jest bohater powieści “Upadek” Alberta Camusa (czyt. kami)?",
+      "img": null,
+      "answers": [
+        "bogatym adwokatem",
+        "bezrobotnym młodzieńcem",
+        "dyrektorem zakładów włókienniczych",
+        "wdową z trójką dzieci"
+      ]
+    },
+    {
+      "question": "Przed czym ostrzegał George Orwell w swojej powieści „Folwark zwierzęcy”?",
+      "img": null,
+      "answers": [
+        "totalitaryzmem",
+        "kolonializmem",
+        "konsumpcjonizmem",
+        "kapitalizmem"
+      ]
+    },
+    {
+      "question": "Malarz Salvador Dali był czołowym przedstawicielem...",
+      "img": null,
+      "answers": [
+        "surrealizmu",
+        "ekspresjonizmu abstrakcyjnego",
+        "taszyzmu",
+        "action paintingu"
+      ]
+    },
+    {
+      "question": "Czego nie można powiedzieć o rzeźbie kinetycznej?",
+      "img": null,
+      "answers": [
+        "nie może być wykonana z tworzyw sztucznych",
+        "ma elementy, które poruszają się np. na wietrze",
+        "jej prekursorem jest Alexander Calder",
+        "niektóre dzieła nazywane są „mobile”"
+      ]
+    },
+    {
+      "question": "Kiedy graffiti zyskało na popularności?",
+      "img": null,
+      "answers": [
+        "w latach siedemdziesiątych",
+        "w latach pięćdziesiątych",
+        "w latach osiemdziesiątych",
+        "w latach czterdziestych"
+      ]
+    },
+    {
+      "question": "Czego nie można powiedzieć o Edouardzie Jeannercie?",
+      "img": null,
+      "answers": [
+        "był Brytyjczykiem",
+        "był znany jako Le Corbusier",
+        "umarł w roku ważnej dla Polski rocznicy",
+        "był architektem modernistycznym"
+      ]
+    },
+    {
+      "question": "Co nie było przyczyną budowania w stylu modernistycznym?",
+      "img": null,
+      "answers": [
+        "Le Corbusier miał duże wpływy w rządzie brytyjskim",
+        "zmniejszające się miejsce na zabudowę",
+        "konieczność szybkiej odbudowy zniszczonych miast",
+        "budowle w stylu modernistycznym buduje się z ujednoliconych prefabrykantów"
+      ]
+    },
+    {
+      "question": "Twórcy Centrum Pompidou w Paryżu celowo umieścili na zewnętrznych ścianach rury, windy i ciągi komunikacyjne, aby uwidocznić strukturę budowli. Jaki to nurt architektoniczny?",
+      "img": null,
+      "answers": [
+        "high-tech",
+        "architektura organiczna",
+        "dekonstruktywizm",
+        "postmodernizm"
+      ]
     }
   ]
 }
