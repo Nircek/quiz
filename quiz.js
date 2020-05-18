@@ -111,14 +111,22 @@ var timer_update = () => {
 
 var select = (e) => {
   question_lock();
+  let next = main.cloneNode(1);
   if (e.getAttribute('c') % 7) ++data.points_i;
+  cmain('answer', 0).map((x) => {
+    x.classList.remove('hovered');
+    if (!(x.getAttribute('c') % 7)) {
+      x.classList.add('incorrect');
+      x.classList.remove('aa', 'ab', 'ac', 'ad');
+    }
+  });
   let end = ++data.question_i == data.questions.length + 1;
-  console.log(data.question_i, data.questions.length + 1, end);
   if (end) {
+    --data.question_i;
     clearInterval(timer);
     data.timer = timer_update();
-    data.question_i = 1;
     question_update(1);
+    data.question_i = 1;
 
     welcome.id = 'welcome';
     cmain('title', 1, welcome)[0].innerHTML = format(data.title);
@@ -126,7 +134,6 @@ var select = (e) => {
     cmain('play', 1, welcome)[0].innerHTML = format(data.try_again);
   }
 
-  let next = main.cloneNode(1);
   next.id = 'next';
   if (end) main.parentElement.append(welcome);
   main.parentElement.append(next);
@@ -140,7 +147,7 @@ var select = (e) => {
       question_unlock();
       main.parentElement.removeChild(prev);
     }, 2000);
-  }, 100);
+  }, 2000);
 };
 
 var start, timer;

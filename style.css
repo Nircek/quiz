@@ -94,15 +94,6 @@ body {
   font-size: 2em;
   flex-grow: 1;
 }
-.play:hover {
-  background-color: #f7c2f7;
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(249, 205, 249),
-    rgb(235, 155, 235),
-    rgb(194, 116, 194)
-  );
-}
 .counter {
   min-width: calc(92vw - 22ch - 42px);
   flex-grow: 1;
@@ -151,7 +142,7 @@ body {
   min-height: calc(30vh - 4em - 40px);
   flex-grow: 1;
 }
-.answer:hover {
+.hovered:hover {
   background-color: #f7c2f7;
   background-image: linear-gradient(
     to bottom right,
