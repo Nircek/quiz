@@ -32,6 +32,7 @@ img {
   background-color: #fff1c5;
 }
 .play {
+  cursor: pointer;
   background-color: #f42323;
   background-image: linear-gradient(
     to bottom right,
@@ -68,6 +69,9 @@ img {
 .footer {
   background-color: #000;
   color: #fff;
+}
+.answer {
+  cursor: pointer;
 }
 .aa {
   background-color: #f42323;
